@@ -26,38 +26,18 @@ form.addEventListener("submit",function(e){
 
 const boton = document.getElementById("btnAgregar")
 
-boton.addEventListener("click", function(){
-    alert("se hizo click en agregar")
-
-
-let codigo = prompt("Ingrese el codigo")
-let nombre = prompt("Ingrese el nombre")
-let precio = prompt("Ingrese el precio")
-
-tabla.innerHTML += `
-<tr>
-    <td>${codigo}</td>
-    <td>${nombre}</td>
-    <td>${precio}</td>
-    <td>
-        <button>Editar</button>
-        <button class="btnBorrar">Borrar</button>
-
-    </td>
-</tr>
-    `
-}) 
-
 document.addEventListener("click", function(e){
-    if(e.target.classList.contains("btnBorrar")){
-        e.target.parentElement.parentElement.remove()
+    if(e.target.classList.contains("borrar")){
+        const index = e.target.dataset.index
+        productos.splice(index,1)
+        renderizarTabla()
     }
 })
 
 // se debe agregar una funcion de renderice la tabla para poder hacer el del boton de editar
 
 function renderizarTabla(){
-    tabla.innerHTML += ""
+    tabla.innerHTML = ""
     productos.forEach(function(producto, index){
         tabla.innerHTML += `
         <tr>
@@ -65,8 +45,8 @@ function renderizarTabla(){
         <td>${producto.nombre}</td>
         <td>${producto.precio}</td>
         <td>
-        <button class = "editar" data-index="${index}"Editar</button>
-        <button class = "borrar" data-index="${index}"Borrar</button>
+        <button class = "editar" data-index="${index}">Editar</button>
+        <button class = "borrar" data-index="${index}">Borrar</button>
         </td>
         </tr>
         `
