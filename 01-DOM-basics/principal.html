@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio js html y css</title>
     <link rel="stylesheet" href="st.css">
-    
-    <title>Ejercicio 1:</title>
 </head>
 <body>
-    <section id="main-section">
-        <div class="container">
-            <article class="card">
-            <h2 id="titulo">TUTULO</h2>
-            <ul class="items">
-                <li class="item">Item 1</li>
-                <li class="item">Item 2</li>
-                <li class="item">Item 3</li></ul>
-            </article>
-        </div>
+    <header>
+        <div>Logo</div>
+        <h1>Empresa Acme</h1>
+        <button>Cerrar Secion</button>
+    </header>
+    <section>
+        <h2>Productos</h2>
+        <button id="btnAgregar">Agregar</button>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaProductos">
+                
+            </tbody>
+        </table>
     </section>
-
-    <button id="boton">Haz click aqui!</button>
-    <p id="texto"></p>
-    
-
-    <script src="scriptEduin.js"></script>
-    
+<script src="scriptEduin.js"></script>
 </body>
 </html>
