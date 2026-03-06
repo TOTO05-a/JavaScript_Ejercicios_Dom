@@ -1,0 +1,42 @@
+#contenedor {
+    border: 2px solid blueviolet;
+    display: flex;
+    flex-direction: column;
+    }
+
+#mensaje {
+    background-color: blue;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 10px;
+    }
+.borde {
+    border: 2px dotted darkblue;
+    }
+
+.fuente {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+.item {
+    padding: 10px;
+    margin: 5px;
+}
+
+.item-background {
+    background: turquoise;
+}
+.item-font-color{
+    color: white;
+}
+.error{
+    color: white;
+    background-color: red;
+
+}
+.exito{
+     color: white;
+    background-color: green;
+}
