@@ -15,12 +15,18 @@ tabla.innerHTML += `
     <td>${precio}</td>
     <td>
         <button>Editar</button>
-        <button>borrar</button>
+        <button class="btnBorrar">Borrar</button>
 
     </td>
 </tr>
     `
 }) 
+
+document.addEventListener("click", function(e){
+    if(e.target.classList.contains("btnBorrar")){
+        e.target.parentElement.parentElement.remove()
+    }
+})
 // const elemento = document.getElementById("titulo");
 // elemento.innerHTML = 'Hola!'
 
