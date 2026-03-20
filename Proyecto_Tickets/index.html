@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conciertos Conectados</title>
+    <link rel="stylesheet" href="..//Proyecto_Tickets/styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h1>Conciertos</h1>
+
+        <div class="filters">
+            <input type="text" placeholder="Buscar evento...">
+            
+            <select>
+                <option>Ciudad</option>
+                <option>Bogotá</option>
+                <option>Medellín</option>
+                <option>Barranquilla</option>
+                <option>Bucaramanga</option>
+            </select>
+
+            <select>
+                <option>Categoría</option>
+                <option>Rock</option>
+                <option>Pop</option>
+            </select>
+        </div>
+
+        <button class="cart-btn">🛒</button>
+    </header>
+
+    <!-- CONTENIDO SPA -->
+    <main id="app">
+
+        <!-- HOME (CLIENTE) -->
+        <section class="events-container">
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="">
+                <h3>Nombre Evento</h3>
+                <p>Fecha | Ciudad</p>
+                <span class="price">Q150</span>
+                <button>Agregar</button>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="">
+                <h3>Nombre Evento</h3>
+                <p>Fecha | Ciudad</p>
+                <span class="price">Q200</span>
+                <button>Agregar</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- MODAL CARRITO -->
+    <div class="modal hidden" id="cartModal">
+        <div class="modal-content">
+            <h2>Carrito</h2>
+            <p>Evento 1 - Q100</p>
+            <p>Evento 2 - Q200</p>
+            <h3>Total: Q300</h3>
+            <button>Comprar</button>
+        </div>
+    </div>
+
+    <!-- LOGIN ADMIN -->
+    <div class="modal hidden" id="loginModal">
+        <div class="modal-content">
+            <h2>Login Admin</h2>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Ingresar</button>
+            <small>admin@mail.com / 123456</small>
+        </div>
+    </div>
+
+    <!-- DASHBOARD ADMIN -->
+    <section class="dashboard hidden">
+
+        <aside class="sidebar">
+            <h2>Admin</h2>
+            <ul>
+                <li>Categorías</li>
+                <li>Eventos</li>
+                <li>Ventas</li>
+            </ul>
+        </aside>
+
+        <div class="dashboard-content">
+            <h2>Panel de control</h2>
+            <p>Aquí se mostrará la información</p>
+        </div>
+
+    </section>
+
+</body>
+</html>
